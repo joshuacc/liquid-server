@@ -1,6 +1,6 @@
 {
-  "name": "liquid-server",
-  "version": "0.1.0",
+  "name": "@joshuacc/liquid-server",
+  "version": "0.1.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "node server.js"
   },
   "bin": {
-    "liquid-server": "./bin/liquid-server"
+    "liquid-server": "./bin/liquid-server.js"
   },
   "keywords": [],
   "author": "",

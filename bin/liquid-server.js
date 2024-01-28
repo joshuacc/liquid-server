@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const express = require('express');
 const { Liquid } = require('liquidjs');
 const path = require('path');
