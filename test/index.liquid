@@ -5,3 +5,20 @@
     <input type="text" name="name" value="">
     <input type="submit" value="Submit">
 </form>
+
+{% assign products =  '
+[
+    {
+        "name": "John",
+        "age": 30
+    },
+    {
+        "name": "Jane",
+        "age": 25
+    }
+]
+' | parse_json %}
+
+{% for product in products %}
+    <p>{{ product.name }} is {{ product.age }} years old</p>
+{% endfor %}

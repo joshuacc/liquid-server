@@ -18,6 +18,16 @@ const engine = new Liquid({
     extname: '.liquid'
 });
 
+// Register custom parse_json filter
+engine.registerFilter('parse_json', (jsonString) => {
+    try {
+        return JSON.parse(jsonString);
+    } catch (error) {
+        console.error('Error parsing JSON:', error);
+        return {};
+    }
+});
+
 // Middleware for logging requests
 app.use((req, res, next) => {
     console.log('--------------------------');
